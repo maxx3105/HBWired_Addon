@@ -34,8 +34,8 @@ HBW-Sen-EP                 | 0x84 |        Fhem.de          |          |
 HBW-Sen-KEY                | 0x85 |        Fhem.de          |          |
 HBW-Sen-SC8                | 0x86 |        Fhem.de          |          |
 HBW-CC-Vd2-T               | 0x87 |        Fhem.de          |          |
-                           | 0x88 |        Fhem.de          |          |
-                           | 0x89 |        Fhem.de          |          |
+Wettersensor               | 0x88 |        Fhem.de          |          |
+Tastsensor                 | 0x89 |        Fhem.de          |          |
 HBW-Sec-MDIR-2             | 0x91 |        Fhem.de          |          |
 HBW-LC-Bl-8                | 0x92 |        Fhem.de          |          |
 HBW-LC-Sw-12               | 0x93 |        Fhem.de          |          |
