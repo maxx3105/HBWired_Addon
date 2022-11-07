@@ -1,6 +1,6 @@
 # HBWired_Addon_CCU
 
-## Bauteile
+## Modelliste
 
 Modell                     |  ID  |        Kommentar        | Firmware |
 -------------------------- | ---- | ----------------------- | -------- |
@@ -27,6 +27,7 @@ HBW-LC-Sw8-IN8-DR          | 0xBA |      Haus-Bus.de        |          |
 HBW-SD6-Multikey           | 0xB1 |      Haus-Bus.de        |          |
 HBW-IO-12-1W-UP            | 0xB2 |      Haus-Bus.de        |          |
 HBW-LC-IO32-DR             | 0xBD |      Haus-Bus.de        |          |
+HBW-DIS-Key-4              | 0x71 |        Fhem.de          |          |
 HBW-1W-T10                 | 0x81 |        Fhem.de          |          |
 HBW-LC-Bl-4                | 0x82 |        Fhem.de          |          |
 HBW-LC-Sw8                 | 0x83 |        Fhem.de          |          |
@@ -42,8 +43,13 @@ HBW-LC-Sw-12               | 0x93 |        Fhem.de          |          |
 HBW_LC_RGB1_CV             | 0xA0 |        Fhem.de          |          |
 HBW-Sen-Key-12             | 0x95 |        Fhem.de          |          |
 HBW-SC-10-Dim-6            | 0x96 |        Fhem.de          |          |
-HBW-SC-10-Dim-6            | 0x96 |        Fhem.de          |          |
+HBW-CC-VD-2/8              | 0x97 |        Fhem.de          |          |
+HBW-Sen-DB-4               | 0x98 |        Fhem.de          |          |
+HBW-Sen-SC-12-DR           | 0xA6 |        Fhem.de          |          |
+xxx                        | 0xxx |        Fhem.de          |          |
+xxx                        | 0xxx |        Fhem.de          |          |
+xxx                        | 0xxx |        Fhem.de          |          |
 
 
 
-### Sonstiges
+### under construction
