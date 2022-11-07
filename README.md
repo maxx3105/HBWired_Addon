@@ -14,7 +14,6 @@ HMW-LC-Bl1-DR-2            | 0x29 |      Original ELV       |   ELV    |
 HMW-LC-Dim1l-DR            | 0x20 |      Original ELV       |   ELV    |
 HMW-LC-Sw2-DR              | 0x17 |      Original ELV       |   ELV    |
 HMW-Sen-SC-12-DR           | 0x25 |      Original ELV       |   ELV    |
-
 HBW-LC4-IN4                | 0xB3 |      Haus-Bus.de        |          |
 HBW-LC-Bl8-DR              | 0xB7 |      Haus-Bus.de        |          |
 HBW-LC-Bl8-IN8-DR          | 0xBC |      Haus-Bus.de        |          |
@@ -28,7 +27,6 @@ HBW-LC-Sw8-IN8-DR          | 0xBA |      Haus-Bus.de        |          |
 HBW-SD6-Multikey           | 0xB1 |      Haus-Bus.de        |          |
 HBW-IO-12-1W-UP            | 0xB2 |      Haus-Bus.de        |          |
 HBW-LC-IO32-DR             | 0xBD |      Haus-Bus.de        |          |
-
 HBW-1W-T10                 | 0x81 |        Fhem.de          |          |
 HBW-LC-Bl-4                | 0x82 |        Fhem.de          |          |
 HBW-LC-Sw8                 | 0x83 |        Fhem.de          |          |
