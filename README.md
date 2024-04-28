@@ -58,6 +58,6 @@ HBW-Sen-PRESS-4            | 0x50 |    4-fach Drucksensor   |          |
 
 - 1.0 - 17.04.2024
   - das AddOn orientiert sich an Jérômes JP-HB-Devices-addon und integriert die Unterstützung für meine HomeBrew-Geräte bzw. Geräte aus der FHEM Community.
-  - in der ersten Version unterstützt das AddOn die Geräte HBW-Sen-PRESS-4.
+  - in der ersten Version unterstützt das AddOn die Geräte HBW-1W-T10.
 
 ### under construction
