@@ -1,0 +1,18 @@
+#!/bin/sh
+
+DEVICE="HBW-1W-T10"
+DEVICE_IMG=hbw-1w-t10.png
+DEVICE_THUMB=hbw-1w-t10_thumb.png
+FIRMWARE_FILE=/firmware/hs485types/hbw_1w_t10_v1.xml
+
+### Edit DEVDB.tcl ###
+devdescrFile="/www/config/devdescr/DEVDB.tcl"
+devdescrSearch="$DEVICE {{50 \/config\/img\/devices\/50\/$DEVICE_THUMB} {250 \/config\/img\/devices\/250\/$DEVICE_IMG}} "
+sed -i "s/\($devdescrSearch\)//g" $devdescrFile
+
+
+rm -f $FIRMWARE_FILE
+rm -f /www/config/img/devices/250/$DEVICE_IMG
+rm -f /www/config/img/devices/50/$DEVICE_THUMB
+
+### Edit webui.js ###
