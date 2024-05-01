@@ -1,4 +1,4 @@
-# HBWired_Addon_CCU
+# HBWired_Addon
 
 ## Device Model IDs:
 
