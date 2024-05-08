@@ -25,6 +25,96 @@ webuiInsert="${webuiInsert}DEV_PATHS['$DEVICE'] = new Object();\n"
 webuiInsert="${webuiInsert}DEV_PATHS['$DEVICE']['50'] = '\/config\/img\/devices\/50\/$DEVICE_THUMB';\n"
 webuiInsert="${webuiInsert}DEV_PATHS['$DEVICE']['250'] = '\/config\/img\/devices\/250\/$DEVICE_IMG';"
 
-if [ -z "`cat $webuiFile | grep \"$DEVICE\"`" ]; then
-	sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile
-fi
+if [ -z "`cat $webuiFile | grep \"$DEVICE\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
+
+webuiSearchBegin="elvST[[:space:]]*=[[:space:]]*new Array();"
+
+webuiInsertParam="SEND_DELTA_TEMP"
+webuiInsertValue="stringTableSendDeltaTemp"
+webuiInsert="\n"
+webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
+if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
+webuiInsertParam="OFFSET"
+webuiInsertValue="stringTableOffset"
+webuiInsert="\n
+webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
+if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
+webuiInsertParam="SEND_MIN_INTERVAL"
+webuiInsertValue="stringTableSendMinInterval"
+webuiInsert="\n"
+webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
+if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
+webuiInsertParam="SEND_MAX_INTERVAL"
+webuiInsertValue="stringTableSendMaxInterval"
+webuiInsert="\n"
+webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
+if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
+webuiInsertParam="ONEWIRE_TYPE"
+webuiInsertValue="stringTableOnewireType"
+webuiInsert="\n"
+webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
+if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
+webuiInsertParam="OWN_ADDRESS"
+webuiInsertValue="stringTableOwnAddress"
+webuiInsert="\n"
+
+### Edit stringtable_de.txt ###
+stringtable_deFile="/www/config/stringtable_de.txt"
+
+stringtable_deInsert="SEND_DELTA_TEMP\t\${stringTableSendDeltaTemp}"
+if [ -z "`cat $stringtable_deFile | grep \"SEND_DELTA_TEMP"`" ]; then echo -e $stringtable_deInsert >> $stringtable_deFile; fi
+stringtable_deInsert="OFFSET\t\${stringTableOffset}"
+if [ -z "`cat $stringtable_deFile | grep \"OFFSET"`" ]; then echo -e $stringtable_deInsert >> $stringtable_deFile; fi
+stringtable_deInsert="SEND_MIN_INTERVAL\t\${stringTableSendMinInterval}"
+if [ -z "`cat $stringtable_deFile | grep \"SEND_MIN_INTERVAL"`" ]; then echo -e $stringtable_deInsert >> $stringtable_deFile; fi
+stringtable_deInsert="SEND_MAX_INTERVAL\t\${stringTableSendMaxInterval}"
+if [ -z "`cat $stringtable_deFile | grep \"SEND_MAX_INTERVAL"`" ]; then echo -e $stringtable_deInsert >> $stringtable_deFile; fi
+stringtable_deInsert="ONEWIRE_TYPE\t\${stringTableOnewireType}"
+if [ -z "`cat $stringtable_deFile | grep \"ONEWIRE_TYPE"`" ]; then echo -e $stringtable_deInsert >> $stringtable_deFile; fi
+stringtable_deInsert="OWN_ADDRESS\t\${stringTableOwnAddress}"
+if [ -z "`cat $stringtable_deFile | grep \"OWN_ADDRESS"`" ]; then echo -e $stringtable_deInsert >> $stringtable_deFile; fi
+
+### Edit translate.lang.stringtable.js ###
+translate_deFile="/www/webui/js/lang/de/translate.lang.stringtable.js"
+translate_deSearch="\"dummy\" : \"\","
+
+translate_deInsert="\n    \"stringTableSendDeltaTemp\" : \"Sendeschwellwert\","
+if [ -z "`cat $translate_deFile | grep \"stringTableSendDeltaTemp\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+translate_deInsert="\n    \"stringTableOffset\" : \"Temperatur-Offset\","
+if [ -z "`cat $translate_deFile | grep \"stringTableOffset\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+translate_deInsert="\n    \"stringTableSendMinInterval\" : \"Mindestsendeabstand\","
+if [ -z "`cat $translate_deFile | grep \"stringTableSendMinInterval\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+translate_deInsert="\n    \"stringTableSendMaxInterval\" : \"Maximalsendeabstand\","
+if [ -z "`cat $translate_deFile | grep \"stringTableSendMaxInterval\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+translate_deInsert="\n    \"stringTableOnewireType\" : \"Sensortyp\","
+if [ -z "`cat $translate_deFile | grep \"stringTableOnewireType\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+translate_deInsert="\n    \"stringTableOwnAddress\" : \"Ger{teadresse\","
+if [ -z "`cat $translate_deFile | grep \"stringTableOwnAddress\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+
+
+### Edit translate.lang.extension.js
+#translate_deFile="/www/webui/js/lang/de/translate.lang.extension.js"
+
+#translate_deSearch="\"iconServiceMessage\":\"Servicemeldung\","
+#translate_deInsert="\n    \"iconChDirArrow\":\"Pfeil zum Taster\","
+#if [ -z "`cat $translate_deFile | grep \"iconChDirArrow\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom01\":\"Benutzerdefiniert 1\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom01\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom02\":\"Benutzerdefiniert 2\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom02\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom03\":\"Benutzerdefiniert 3\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom03\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom04\":\"Benutzerdefiniert 4\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom04\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom05\":\"Benutzerdefiniert 5\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom05\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom06\":\"Benutzerdefiniert 6\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom06\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom07\":\"Benutzerdefiniert 7\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom07\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom08\":\"Benutzerdefiniert 8\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom08\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom09\":\"Benutzerdefiniert 9\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom09\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
+#translate_deInsert="\n    \"iconHbCustom10\":\"Benutzerdefiniert 10\","
+#if [ -z "`cat $translate_deFile | grep \"iconHbCustom10\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi

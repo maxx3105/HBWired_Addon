@@ -1,6 +1,6 @@
 #!/bin/tclsh
-set checkURL    "https://github.com/maxx3105/HBWired_Addon_CCU//CCU_RM/src/addon/VERSION"
-set downloadURL "https://github.com/maxx3105/HBWired_Addon_CCU/CCU_RM/hbwired_addon.tgz"
+set checkURL    "https://github.com/maxx3105/HBWired_Addon/CCU_RM/src/addon/VERSION"
+set downloadURL "https://github.com/maxx3105/HBWired_Addon/CCU_RM/hbwired_addon.tgz"
 catch {
   set input $env(QUERY_STRING)
   set pairs [split $input &]

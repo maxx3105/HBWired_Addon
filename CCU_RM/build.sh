@@ -1,6 +1,6 @@
 #!/bin/sh
 #COPYFILE_DISABLE=1; export COPYFILE_DISABLE
-ADDON_NAME=hbwired-addon
+ADDON_NAME=hbwired_addon
 
 rm ${ADDON_NAME}.tgz
 cd src
