@@ -1,5 +1,5 @@
 #!/bin/tclsh
-set checkURL    "https://raw.githubusercontent.com/maxx3105/HBWired_Addon/tree/main/CCU_RM/src/addon/VERSION"
+set checkURL    "https://raw.githubusercontent.com/maxx3105/HBWired_Addon/master/CCU_RM/src/addon/VERSION"
 set downloadURL "https://github.com/maxx3105/HBWired_Addon/raw/main/CCU_RM/hbwired_addon.tgz"
 catch {
   set input $env(QUERY_STRING)
