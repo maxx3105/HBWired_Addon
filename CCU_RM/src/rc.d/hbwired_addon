@@ -292,8 +292,8 @@ case "$1" in
     info)
 	  echo "Info: <center><b>HBWired AddOn</b></center><br />"
     echo "Info: <center><img src='../addons/${ADDON_NAME}/${ADDON_NAME}.png'></img></center><br/>" 
-	  echo "Info: <b>CCU2/3, RaspberryMatic</b><br>"
-	  echo "Info: (c) 2018-2021 jp112sdl<br>(c) 2019-2021 TomMajor (Reduced-Repack)<br>(c) 2024 maxx3105 (HBWired Addon)<br>"
+	  echo "Info: <center><b>CCU2/3, RaspberryMatic</b></center><br>"
+	  echo "Info: 2024 maxx3105 (HBWired Addon)<br>Danke an jp112sdl, TomMajor und alle die dieses Projekt ermöglichen.<br>"
 	  echo "Info: <a target='_blank' href='https://github.com/maxx3105/HBWired_Addon'>Projekt auf Github</a>"
 	  echo "Version: $(cat ${ADDON_DIR}/VERSION)"
 	  echo "Name: HBWired AddOn"

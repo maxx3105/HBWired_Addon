@@ -88,7 +88,7 @@ translate_deInsert="\n    \"stringTableSendMaxInterval\" : \"Maximalsendeabstand
 if [ -z "`cat $translate_deFile | grep \"stringTableSendMaxInterval\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
 translate_deInsert="\n    \"stringTableOnewireType\" : \"Sensortyp\","
 if [ -z "`cat $translate_deFile | grep \"stringTableOnewireType\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
-translate_deInsert="\n    \"stringTableOwnAddress\" : \"Ger{teadresse\","
+translate_deInsert="\n    \"stringTableOwnAddress\" : \"Ger%E4teadresse\","
 if [ -z "`cat $translate_deFile | grep \"stringTableOwnAddress\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
 
 
