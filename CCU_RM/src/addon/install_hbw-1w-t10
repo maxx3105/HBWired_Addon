@@ -36,7 +36,7 @@ webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';
 if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
 webuiInsertParam="OFFSET"
 webuiInsertValue="stringTableOffset"
-webuiInsert="\n
+webuiInsert="\n"
 webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
 if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
 webuiInsertParam="SEND_MIN_INTERVAL"
@@ -88,7 +88,7 @@ translate_deInsert="\n    \"stringTableSendMaxInterval\" : \"Maximalsendeabstand
 if [ -z "`cat $translate_deFile | grep \"stringTableSendMaxInterval\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
 translate_deInsert="\n    \"stringTableOnewireType\" : \"Sensortyp\","
 if [ -z "`cat $translate_deFile | grep \"stringTableOnewireType\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
-translate_deInsert="\n    \"stringTableOwnAddress\" : \"Geraeteadresse\","
+translate_deInsert="\n    \"stringTableOwnAddress\" : \"Ger{teadresse\","
 if [ -z "`cat $translate_deFile | grep \"stringTableOwnAddress\"`" ]; then sed -i "s/\($translate_deSearch\)/\1$translate_deInsert/g" $translate_deFile; fi
 
 
