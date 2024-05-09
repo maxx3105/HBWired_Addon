@@ -46,7 +46,7 @@ HBW-SC-10-Dim-6            | 0x96 |        Fhem.de          |          |
 HBW-CC-VD-2/8              | 0x97 |        Fhem.de          |          |
 HBW-Sen-DB-4               | 0x98 |        Fhem.de          |          |
 HBW-Sen-SC-12-DR           | 0xA6 |        Fhem.de          |          |
-xxx                        | 0xxx |        Fhem.de          |          |
+HBW-Sen-SC-12-FM           | 0xA7 |        Fhem.de          |          |
 xxx                        | 0xxx |        Fhem.de          |          |
 xxx                        | 0xxx |        Fhem.de          |          |
 
