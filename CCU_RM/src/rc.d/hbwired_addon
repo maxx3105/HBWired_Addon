@@ -108,17 +108,17 @@ case "$1" in
       
         cd ${ADDON_DIR}
         cp -ar www/* /www/
-        chown root:root /www/config/img/devices/250/hb-*
-        chmod 755 /www/config/img/devices/250/hb-*
-        chown root:root /www/config/img/devices/50/hb-*
-        chmod 755 /www/config/img/devices/50/hb-*
+        chown root:root /www/config/img/devices/250/hbw-*
+        chmod 755 /www/config/img/devices/250/hbw-*
+        chown root:root /www/config/img/devices/50/hbw-*
+        chmod 755 /www/config/img/devices/50/hbw-*
 #        chown root:root /www/ise/img/icons_hm_dis_ep_wm55/24/*
 #        chmod 755 /www/ise/img/icons_hm_dis_ep_wm55/24/*
         
         ### Patch some files ###
 #        ./patchworker install ${ADDON_NAME} ${PATCHSUBDIR_VERSION} $model.$version.$build.$bdate
 
-        cd /www
+#        cd /www
 
 #        if [ ! -f ${CK_FIRMWARE_FILE} ]; then
 #          echo "Fresh installation - revoking patches not needed." | tee -a $GLOBAL_LOGFILE
