@@ -1,8 +1,13 @@
 <?xml version="1.0"?>
 <device eep_size="1024" version="14">
 <supported_types>
-	<type priority="2" id="HBW-Sen-SC-12-DR" name="RS485 12 Digital inputs">
+	<type priority="2" id="HBW-Sen-SC-12-DR" name="RS485 12 Digital inputs (Din Rail)">
 		<parameter const_value="0xA6" size="1" index="0"/><!--HMW_DEVICETYPE-->
+		<parameter const_value="1" size="1" index="1"/><!--HARDWARE_VERSION-->
+		<parameter const_value="0x003C" size="2" cond_op="GE" index="2"/><!--Min. FIRMWARE_VERSION-->
+	</type>
+		<type priority="2" id="HBW-Sen-SC-12-FM" name="RS485 12 Digital inputs (flush-mount)">
+		<parameter const_value="0xA7" size="1" index="0"/><!--HMW_DEVICETYPE-->
 		<parameter const_value="1" size="1" index="1"/><!--HARDWARE_VERSION-->
 		<parameter const_value="0x003C" size="2" cond_op="GE" index="2"/><!--Min. FIRMWARE_VERSION-->
 	</type>
@@ -21,6 +26,12 @@
 			<address index="0x0006"/>
 		</physical>	
 	</parameter>
+	<parameter id="OWN_ADDRESS">
+        <logical type="integer" default="1124073471" max="1107558399" min="1107296256"/>
+        <physical size="4" type="integer" interface="eeprom">
+            <address index="0x3FC"/>
+        </physical>
+    </parameter>
 	<enforce id="CENTRAL_ADDRESS" value="1"/>
 	<enforce id="DIRECT_LINK_DEACTIVATE" value="true"/>
 </paramset>

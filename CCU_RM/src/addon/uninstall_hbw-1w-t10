@@ -1,9 +1,9 @@
 #!/bin/sh
 
-DEVICE="HBW-1W-T10"
-DEVICE_IMG=hbw-1w-t10.png
-DEVICE_THUMB=hbw-1w-t10_thumb.png
-FIRMWARE_FILE=/firmware/hs485types/hbw_1w_t10_v1.xml
+DEVICE="HBW-Sen-SC-12-DR"
+DEVICE_IMG=hbw-sen-sc-12.png
+DEVICE_THUMB=hbw-sen-sc-12_thumb.png
+FIRMWARE_FILE=/firmware/hs485types/hbw_sen_sc_12_dr.xml
 
 ### Edit DEVDB.tcl ###
 devdescrFile="/www/config/devdescr/DEVDB.tcl"
