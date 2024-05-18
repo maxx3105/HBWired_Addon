@@ -34,11 +34,6 @@ webuiInsertValue="stringTableSendDeltaTemp"
 webuiInsert="\n"
 webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
 if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
-webuiInsertParam="OFFSET"
-webuiInsertValue="stringTableOffset"
-webuiInsert="\n"
-webuiInsert="${webuiInsert}elvST['$webuiInsertParam'] = '\${$webuiInsertValue}';"
-if [ -z "`cat $webuiFile | grep \"$webuiInsertParam\"`" ]; then sed -i "s/\($webuiSearchBegin\)/\1$webuiInsert/g" $webuiFile; fi
 webuiInsertParam="SEND_MIN_INTERVAL"
 webuiInsertValue="stringTableSendMinInterval"
 webuiInsert="\n"
