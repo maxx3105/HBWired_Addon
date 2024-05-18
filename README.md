@@ -41,7 +41,8 @@ HBW-Sec-MDIR-2             | 0x91 |        Fhem.de          |          |
 HBW-LC-Bl-8                | 0x92 |        Fhem.de          |          |
 HBW-LC-Sw-12               | 0x93 |        Fhem.de          |          |
 HBW_LC_RGB1_CV             | 0xA0 |        Fhem.de          |          |
-HBW-Sen-Key-12             | 0x95 |        Fhem.de          |          |
+HBW-Sen-Key-12-DR          | 0x94 |        Fhem.de          |          |
+HBW-Sen-Key-12-FM          | 0x95 |        Fhem.de          |          |
 HBW-SC-10-Dim-6            | 0x96 |        Fhem.de          |          |
 HBW-CC-VD-2/8              | 0x97 |        Fhem.de          |          |
 HBW-Sen-DB-4               | 0x98 |        Fhem.de          |          |
